@@ -1,0 +1,992 @@
+
+*{
+    box-sizing: border-box
+}
+
+a.viewAllVid {
+    color: #60849D;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.courseIntro:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+}
+
+.courseIntro:before {}
+
+img.card-img-top.courseImg {
+    transition: .5s;
+}
+
+.layerNinja {
+    position:  absolute;
+    width:  100%;
+    height:  100%;
+    background: transparent;
+    top: 0;
+    transition: .5s;
+}
+
+.card .image:before {
+    content:  "";
+    position:  absolute;
+    width: 60px;
+    background: white;
+    opacity: 0;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%,-50%);
+    height: 5px;
+    z-index: 100;
+    transition:  .5s;
+}
+
+.card .image:after {
+    content: "";
+    position: absolute;
+    width: 5px;
+    background: white;
+    opacity: 0;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: 65px;
+    z-index: 100;
+    transition: .5s;
+}
+
+.card a.image {
+    overflow:  hidden;
+    position:  relative;
+    display:  block;
+    border-bottom: 5px solid orange;
+}
+.headerWhite{
+    background: #f1f1f1!important;
+    transition: .5s;
+}
+
+.teachers .teacherImages .teacher hr {
+    margin: 10px 50px;
+    border: 0;
+    height: 3px;
+    background: #f1f1f1;
+}
+
+.teachers .teacherImages .teacher img {
+    height: 250px;
+    width:  250px;
+    margin:  0 auto;
+    border-radius: 50%;
+    display: block;
+}
+html {
+    background-color: white;
+  }
+body{
+    background: #F1F1F1;
+}
+.container{
+    max-width: 1000px!important;
+    padding: 0!important
+}
+
+.teachers .container {
+}
+.header{
+    background: transparent;
+    color: black!important;
+    position:  fixed;
+    top: 0;
+    z-index: 900;
+    transition: .5s;
+}
+.navbar{
+    max-width: 1200px;
+    margin: 0 auto
+}
+.headerTop{
+    height: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem
+}
+.headerTop  ul{
+    margin: 0;
+    float: right;
+    padding: 0
+}
+.headerTop  ul li{
+    display: inline-block;
+    margin-left: 10px;
+}
+.headerTop  ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: .7rem;
+}
+/* headerbot */
+.headerBot nav{
+    padding: 5px 0;
+}
+.headerBot a.nav-link{
+    font-weight: bold;
+}
+
+.navigation{
+    position: relative;
+    height: 100%;
+}
+.navigation::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20%;
+    height: 100%;
+    background: inherit;
+    width: 10px;
+    transform: skewX(-45deg);
+    box-shadow: -6px -2px 5px -2px #4343432e;
+}
+.brandName{
+    font-weight: bold;
+    padding: 0px!important;
+}
+.brandName img{
+    height: 40px;
+    margin-right: 10px;
+}
+
+/* content */
+.content{
+    width: 100%;
+}
+.content .banner{
+    width: 100%;
+    height: 88vh;
+    background-image: url('../images/bg.png');
+    background-size: cover;
+    margin: 0;
+}
+.content .banner .btn{
+    display: block;
+    width: 30%;
+    margin-bottom: 40px;
+    border-radius: 30px;
+    transform: skewX(-20deg);
+    transition: .5s;
+    font-weight: 500;
+    border:  none;
+}
+
+.content .banner .btn.btn-primary {
+    background-color: #b9a600!important;
+}
+
+.content .banner .btn.btn-primary:hover {
+    background: deepskyblue!important;
+    color: #ffffff;
+    transition: .5s;
+}
+
+.content .banner h1{
+    margin-bottom: 40px;
+}
+
+.banner .container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.contentBanner{
+    width: 50%;
+}
+.contentBanner h1{
+    font-size: 50px;
+    color: rgb(63, 63, 62);
+}
+
+
+/* register     */
+.register{background: #F1F1F1;}
+.register .container{
+    z-index: 100;
+height: 600px;
+
+width: 100%;
+
+position:  relative;
+}
+.register .registerBox{width: 100%;height: 90%;position:  absolute;left:  50%;top: 50%;transform: translate(-50%,-50%);}
+.register .registerBox .mainBox{
+    width:  100%;
+    height:  100%;
+    border: 10px solid #555555;
+    position:  relative;
+}
+
+.register .registerBox .mainBox .registerRightBox{
+    width:  50%;
+    height: 100%;
+    background: #b6b6b6;
+    padding: 15px;
+    position:  absolute;
+    right: 0;
+}
+.register .registerBox .mainBox .registerRightBox h3{
+    color: #181816;
+}
+.register .registerBox .mainBox .registerRightBox p{
+    font-weight: 600;
+    color: #000000;
+}
+.register .registerBox .mainBox .registerRightBox p span{
+    color: #E91E63;
+}
+
+
+/* form */
+.register .registerBox .mainBox .registerLeftBox{
+    width:  50%;
+    background: #FDFDFD;
+    position:  absolute;
+    bottom: -2px;
+    height: auto;
+    border: 4px solid #3F3F3F;
+    box-shadow: 4px 4px 5px 3px;
+}
+.register .registerBox .mainBox .registerLeftBox{}
+.register .registerBox .mainBox .registerLeftBox h3{
+    text-align:  center;
+    padding: 20px;
+    margin-bottom: 0px;
+}
+.register .registerBox .mainBox .registerLeftBox form{
+    background: #b5b5b5;
+    padding: 25px;
+    padding-top: 66px;
+}
+.register .registerBox .mainBox .registerLeftBox form button{
+    transform: translateX(-50%);
+    position: relative;
+    left: 50%;
+    width: 120px;
+}
+
+
+
+
+
+/* courses and teachers */
+.coursesAndTeachers{
+    width: 100%;
+    overflow:  hidden;
+}
+.coursesAndTeachers .layerBlack{
+    background: #f5f5dc7d;
+}
+.coursesAndTeachers .courses{
+
+width: 100%;
+
+height: 70%;
+
+z-index: 100;
+
+padding: 10px 0;
+
+margin-bottom: 69px;
+}
+.coursesAndTeachers .courses h2{
+
+text-align: center;
+
+color: black;
+
+margin-bottom: 50px;
+
+margin-top: 10px;
+}
+.coursesAndTeachers .courses .container{
+}
+.coursesAndTeachers .courses .course .card-title{
+
+margin-top: 20px;
+
+padding: 6px 0;
+
+text-align:  center;
+}
+.coursesAndTeachers .courses .course .card{
+
+background: #F7F7F7;
+
+transition: .5s;
+
+overflow:  hidden;
+
+box-shadow: 0px 0px 20px 1px rgba(0,0,0,.5);
+}
+
+.coursesAndTeachers .courses .course .card:hover .layerNinja {
+    background: #31313147;
+    transition: .5s;
+}
+
+.coursesAndTeachers .courses .course .card:hover img {
+    transform: scale(1.2);
+    transition: .5s;
+}
+
+.coursesAndTeachers .courses .course .card:hover .image:before {
+    background: white;
+    left: 50%;
+    transition:  .5s;
+    opacity:1
+}
+
+.coursesAndTeachers .courses .course .card:hover .image:after {
+    background: white;
+    top: 50%;
+    transition: .5s;
+    opacity:1
+}
+
+.coursesAndTeachers .courses .course .card:hover card-img-top {
+}
+.coursesAndTeachers .courses .course .card .card-body{
+
+margin-bottom: 20px;
+}
+.coursesAndTeachers .courses .course .btn{
+
+position:  absolute;
+
+bottom: -40px;
+
+left:  50%;
+
+width: 130px;
+
+height: 80px;
+
+line-height: 63px;
+
+transform: translateX(-50%);
+
+border-radius: 50%;
+
+font-size: 15px;
+
+overflow:  hidden;
+
+text-align:  center;
+}
+
+
+.coursesAndTeachers .courses .course1 .btn{
+
+background: #DA7B00;
+
+border:  none;
+}
+.coursesAndTeachers .layerBlack{}
+.layerBlack{
+    position:  absolute;
+    width:  100%;
+    height:  100%;
+    z-index: 50;
+}
+.coursesAndTeachers .courses .course2 .btn{
+
+background: #005AFF;
+
+border:  none;
+}
+.coursesAndTeachers .courses .course2 .card-title{
+}
+.coursesAndTeachers .courses .course3 .btn{
+
+background:  #FFC700;
+
+border:  none;
+}
+.coursesAndTeachers .courses .course3 .card-title{
+}
+
+
+
+.coursesAndTeachers .teachers{
+    width: 100%;
+    z-index: 100;
+    background: url('../images/bannerCourse.jpg');
+    background-size: cover;
+    position:  relative;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.coursesAndTeachers .teachers:before {
+    content:  "";
+    position:  absolute;
+    width:  100%;
+    height:  100%;
+    background: rgba(0,0,0,0.7);
+    z-index: -1;
+}
+
+
+.teachers h3{
+    text-align:  center;
+    color: #f1f1f1;
+    margin-bottom: 39px;
+    padding-top: 30px;
+}
+.teachers .teacherImages{display:  flex;justify-content: space-around;flex-wrap: nowrap;width: 100%;margin:  auto;}
+.teachers .teacherImages .teacher{
+    width: 300px;
+    height: auto;
+}
+
+.teachers .teacherImages .teacher p {
+    text-align:  center;
+    font-weight:  bold;
+    color: #f1f1f1;
+}
+.teacherName{
+    font-size: 1.5em;
+    margin-bottom: 0px;
+}
+
+.teacherMajor{
+    font-weight: 400;
+    font-size: 0.7em;
+}
+.teacherInfo{
+    font-size: : 0.7em;
+}
+
+.courseIntro{
+    background: url('../images/suMenhBackground.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 1050px;
+    background-attachment:  fixed;
+    position: relative;
+}
+.courseIntro .layerBlack{
+    background: #f5f5dc7d;
+}
+.courseIntro  .oneRow{
+    position: relative;
+    z-index: 100;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    height: 227px;
+    margin-top: 80px;
+    display:  flex;
+    align-items:  center;
+}
+.courseIntro  .oneRow .left{
+    margin-right: 10px;
+}
+.courseIntro  h2{
+    color: white;
+    text-align: center;
+    position: relative;
+    z-index: 100;
+    font-weight:  bold;
+}
+.courseIntro  .oneRow .left,.courseIntro  .oneRow .right{
+    width: 40%;
+}
+
+.courseIntro  .oneRow .courseIntroText{
+    font-family: 'Open Sans';
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.courseIntroText .title{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 28px;
+}
+
+.courseIntroText .title:hover{
+    color: yellow;
+}
+
+.courseIntro  .oneRow.courseIntro1 .courseIntroImage{
+    background: url('../images/courseIntro1.png');
+    background-size: cover;
+    height: 200px;
+}
+
+
+.courseIntro  .oneRow.courseIntro2 .courseIntroImage{
+    background: url('../images/courseIntro2.png')!important;
+    height: 200px;
+}
+.courseIntro  .oneRow.courseIntro3 .courseIntroImage{
+    background: url('../images/courseIntro3.png')!important;
+    height: 200px;
+}
+
+/* /liveChat */
+.liveChat{
+    position:  fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+.liveChat .bubble-msg{
+    float:  left;
+    margin-right: 10px;
+    border: 1px solid transparent;
+    padding: 2px 15px;
+    background: #627AAD;
+    border-radius: 12px;
+    color: white;
+}
+.liveChat a{}
+.liveChat a i{
+    font-size: 75px;
+}
+/* footer */
+.footer{
+    background: #ffffff;
+    color: black;
+}
+.footer .social{
+
+margin: 0;
+
+padding: 0;
+
+margin-top: 30px;
+
+list-style:  none;
+
+height: 60px;
+}
+.footer .social li{
+
+float:  left;
+
+width: 39px;
+
+height: 39px;
+
+margin-right: 15px;
+}
+.footer .social li:last-child{
+    margin: 0
+}
+.footer .social li a{
+
+display:  block;
+
+width:  100%;
+
+height: 100%;
+
+position:  relative;
+}
+
+a.facebook {
+}
+
+a.facebook i {
+}
+.footer .social li a i{font-size: 39px;position: absolute;left:  50%;top: 50%;transform: translate(-50%,-50%);color:  red;}
+
+.footer .social li a i.fa-facebook-square {
+    color: #3B5998;
+}
+
+.footer .social li a i.fa-facebook-f{
+    color: #385C8E;
+}
+.footer .social li a i.fa-envelope{
+    color: #EB5A49;
+}
+.footer .social li a i.fa-twitter{
+    color: #03A9F4;
+}
+@media(min-width: 576px) and (max-device-width : 993px){
+    *{
+}
+
+.imgPopup {
+    width: 500px!important;
+    height: 748px!important;
+}
+
+.content .banner {
+    height: 60vh;
+}
+
+.teachers .teacherImages .teacher p {
+    font-size: 15px;
+}
+
+.teachers .teacherImages .teacher img {
+    width: 200px;
+    height: 200px;
+}
+
+.teachers .teacherImages .teacher {
+    width: 200px;
+}
+
+.coursesAndTeachers .courses {
+    padding: 10px 20px;
+}
+
+.button {
+}
+
+.contentBanner {
+    margin:  auto;
+}
+    }
+    @media(max-width: 1025px){
+        *{}
+
+.imgPopup {
+    width: 600px!important;
+    height: 897px!important;
+}
+    }    
+@media(max-width: 992px){
+    *{}
+
+.header.navbar-light.container-fluid {
+    background: #f1f1f1!important;
+}
+
+.header.navbar-light.container-fluid.headerWhite {
+    background: #f1f1f1!important;
+}
+}
+@media(max-width: 576px){
+    *{}
+
+.imgPopup {
+    width: 250px!important;
+    height: 374px!important;
+}
+
+.teachers .teacherImages .teacher p {
+    font-size: 14px;
+}
+
+.teachers .teacherImages .teacher img {
+    width: 200px;
+    height: 200px;
+}
+
+.courseIntro .oneRow.courseIntro1 .courseIntroImage {
+    height: 100px;
+}
+
+.courseIntro .oneRow.courseIntro3 .courseIntroImage {
+    height: 100px;
+}
+
+.courseIntro .oneRow.courseIntro2 .courseIntroImage {
+    height: 100px;
+}
+
+.courseIntroText .title {
+    font-size: 12px;
+}
+
+.courseIntroText p {
+    font-size: 10px;
+}
+
+.courseIntro h2 {
+}
+
+.content .banner h1 {
+    margin-top: 30px;
+}
+
+.headerTop ul {
+    height: 100%;
+    width: 100%;
+}
+
+.headerTop {
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+.navigation::before {
+    opacity: 0;
+}
+
+.liveChat {
+    bottom: 0px;
+}
+
+.headerTop ul li {
+    float: right;
+    height: 50%;
+}
+
+.content .banner .btn {
+    float:  left;
+    margin-right: 40px;
+}
+
+.headerTop {
+}
+
+.register .container {
+    height: 100%;
+}
+
+.footer .social {
+    margin:  auto;
+    display:  flex;
+    justify-content:  center;
+    margin-top: 1rem;
+}
+
+.col-md-3.mb-md-0.mb-3.col-6.link2 h5,.col-md-3.mb-md-0.mb-3.col-6.link2 ul {
+    float: none!important;
+}
+
+.courseIntro {
+    height: auto;
+}
+
+.courseIntro .oneRow .courseIntroText {
+    font-size: 12px;
+}
+
+.courseIntro .oneRow {
+    height: auto;
+    margin-top: 30px;
+}
+
+.teachers .teacherImages .teacher {
+    margin: 0;
+    margin: 20px 0;
+}
+
+.teachers .teacherImages {
+    height:  auto;
+    flex-wrap: wrap;
+    align-items:  center;
+}
+
+.teachers .teacherImages {}
+
+.coursesAndTeachers .courses .course {
+    margin-bottom: 60px;
+    padding: 0 40px;
+}
+
+.coursesAndTeachers {
+    position:  relative;
+}
+
+.register .registerBox .mainBox .registerLeftBox form {
+    padding: 15px;
+}
+
+.register .registerBox .mainBox .registerLeftBox h3 {
+    padding: 10px;
+}
+
+.register .registerBox .mainBox .registerRightBox {
+    width: 100%;
+    height: 50%;
+}
+
+.register {
+    height: 1100px;
+}
+
+.register .registerBox .mainBox .registerLeftBox {
+    width: 100%;
+    z-index: 100;
+}
+
+.content .banner .contentBanner {
+    width: 100%;
+    padding: 0 5%;
+}
+
+.headerTop ul li a {font-size: 10px;}
+}
+
+/*  Button slide  */
+
+.button {
+    width: 250px;
+    margin: 20px;
+    border: 2px solid #2e2e2e;
+    cursor: pointer;
+    letter-spacing: 0.2125rem;
+    overflow: hidden;
+    padding: 20px 30px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    transition:
+        background 5s cubic-bezier(0.19, 1, 0.22, 1),
+        border 1s cubic-bezier(0.19, 1, 0.22, 1),
+        color 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    user-select: none;
+}
+
+.button a {
+    color: rgb(63, 63, 62);
+    font-family: "Varela Round";
+    text-decoration: none !important;
+}
+
+.button .mask {
+    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 100px;
+    position: absolute;
+    transform: translate3d(-120%, -50px, 0) rotate3d(0, 0, 1, 45deg);
+    transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+    width: 200px;
+}
+
+.button .shift {
+    display: inline-block;
+    transition: all 1.1s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: black;
+    box-shadow: 0 0 5px rgba(255, 245, 245, 0.8);
+    transition: background 0s;
+}
+
+.button:hover a {
+    color: black;
+    font-weight: bold;
+}
+
+.button:hover .mask {
+    background-color: black;
+    transform: translate3d(120%, -100px, 0) rotate3d(0, 0, 1, 90deg);
+}
+
+.button:hover .shift {
+    transform: translateX(5px);
+}
+
+.button:active {
+    background-color: black;
+}
+
+.button:active a {
+    color: black;
+}
+
+/*End Button Slide*/
+
+/*nav-bar*/
+.navbar-nav .nav-item{
+    margin: 0px 20px;
+}
+
+
+/*spinner*/
+
+.loading-mask {
+  position: relative;
+}
+
+
+.loading-mask::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+.loading-mask::after {
+  content: "";
+  position: absolute;
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent rgb(255, 255, 255) rgb(255, 255, 255);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  top: calc(50% - 12px);
+  left: calc(50% - 12px);
+  animation: 2s linear 0s normal none infinite running spin;
+  filter: drop-shadow(0 0 2 rgba(0, 0, 0, 0.33));
+}
+
+.popup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,.5);
+}
+.popup .imgPopup{
+    background-image: url("../images/poster.jpg");
+    background-size: cover;
+    width: 363px;
+    height: 545px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.popup .fa-times-circle{
+    
+position: absolute;
+    
+right: 0;
+    
+top: 0;
+    
+font-size: 30px;
+    
+color: black;
+    
+cursor: pointer;
+}

@@ -1,0 +1,326 @@
+<style type="text/css">
+    .banner {
+        background-image: url('../images/bgRegis.jpg') !important;
+    }
+
+    .header {
+        background: #f1f1f1!important;
+    }
+
+    .contentBanner h1 {
+        color: white;
+    }
+
+    .course {
+        background: #F3F3F3;
+    }
+
+    .registerBtn {
+        position: absolute;
+        bottom: 100px;
+        font-size: 35px;
+        width: 100% !important;
+        margin-left: 10px !important;
+    }
+
+    .contentCourse {
+        margin-left: 10px !important;
+    }
+
+    .detail-time {
+        list-style: none;
+        text-align: left;
+    }
+
+    .titleCourse {
+        text-transform: uppercase;
+        text-shadow: 2px 2px 4px #60849D;
+    }
+
+    .title {
+        color: #60849D;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    ul li {
+        position: relative;
+        padding-left: 15px;
+        list-style: none;
+    }
+
+    ul li::before {
+        content: "\f105";
+        font-family: FontAwesome;
+        color: #b2b2b2;
+        position: absolute;
+        left: 0;
+        top: 0px;
+    }
+
+    .pd-5 {
+        padding: 50px 0;
+    }
+
+    hr {
+        border-style: dotted;
+        font-size: 20px;
+    }
+
+    .course b {
+        font-weight: 600;
+        color: #60849D;
+    }
+
+    .course table thead {
+        background: #60849D;
+        color: white;
+    }
+
+    @media screen and (min-width: 350px) {
+        .registerBtn {
+            width: 250px !important;
+        }
+        .titleCourse {
+            font-size: 28px;
+        }
+    }
+
+    /*form*/
+
+    #registerForm form {
+        padding: 35px 20%;
+        background: white;
+    }
+
+
+    #registerForm .modal-header {
+        background: #60849D;
+        color: white;
+    }
+
+    #registerForm .close {
+        color: white;
+    }
+
+    #registerForm .modal-title {
+        text-transform: uppercase;
+    }
+
+    #registerForm .modal-body {
+        padding: 0px;
+        background: #eae6ea;
+    }
+
+    .introCourse {
+        text-align: center;
+        text-transform: uppercase;
+        border-bottom: 1px dashed #60849D;
+        padding: 15px;
+        font-size: 22px;
+        font-weight: 600;
+        font-family: 'Open Sans';
+        color: #674f49;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<%- contentFor('bodyContent') %>
+    <div class="banner">
+        <div class="container">
+            <button type="button" class=" btn btn-primary registerBtn" data-toggle="modal" data-target="#registerForm">Đăng Ký</button>
+        </div>
+    </div>
+    <div class="course" style="padding-bottom: 100px;">
+        <div class="container">
+            <div class="contentCourse ">
+                <h1 class="titleCourse pd-5">LẬP TRÌNH WEB MIỄN PHÍ</h1>
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#web-co-ban" aria-expanded="false" aria-controls="web-co-ban">
+                    <i class="fa fa-calendar" aria-hidden="true"></i> 5/10/2018
+                </button>
+                <p class="address">
+                    <i class="fa fa-map-marker title mt-3" aria-hidden="true" style="font-size: 20px; padding-right: 15px;"></i>
+                    Số 9, Trung Liệt, Hà Nội
+                </p>
+                <h4 class="title">Học phí : Miễn phí</h4>
+                <hr>
+
+                <h4 class="title">Có gì HOT tại những buổi học miễn phí này ?</h4>
+                <ul>
+                    <li>
+                        <b>Mỗi tháng một buổi </b>nội dung học cập nhật mới liên tục theo yêu cầu của người học</li>
+                    <li>Định hướng ngành lập trình web</li>
+                    <li>Giao lưu code với các thành viên</li>
+
+                    <li>Với kinh nghiệm chuyên môn thực tế và sự tận tâm, đội ngũ giảng viên sẽ dẫn bạn từ số 0 đến thành thạo
+                        kỹ năng web căn bản.</li>
+                    <li>Ninja Dev là nhà, ở đây mọi người có thể thoải mái chia sẻ những câu chuyện ước mơ, cùng nhau biến nó
+                        thành hiện thực.</li>
+                </ul>
+
+                <hr>
+                <div class="coursesAndTeachers">
+                    <div id="courses" class="courses">
+                        <h2>Các khóa học hiện tại của NinjaDev</h2>
+                        <div class="container">
+                            <div class="row mb-3 mt-3">
+
+                                <div class="course course1 col-sm-6 col-12">
+                                    <div class="card ">
+                                        <a href="/web-co-ban" class="image">
+                                            <img class="card-img-top courseImg" ng-src="./images/course1.png" alt="Lập trình website cơ bản">
+                                            <div class="layerNinja"></div>
+                                        </a>
+                                        <h5 class="card-title">Cơ Bản</h5>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                Dành cho những bạn chưa biết gì về lập trình, bắt đầu từ con số 0. Khóa học cơ bản sẽ giúp bạn có cái nhìn tổng quan về lộ
+                                                trình thiết kế website. Sau khóa học có tự làm được một trang website bắt
+                                                mắt.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="course course3 col-sm-6 col-12">
+                                    <div class="card ">
+                                        <a href="/web-nang-cao" class="image">
+                                            <img class="card-img-top courseImg" ng-src="./images/course3.png" alt="Lập trình website nâng cao">
+                                            <div class="layerNinja"></div>
+                                        </a>
+                                        <h5 class="card-title">Nâng Cao</h5>
+                                        <div class="card-body">
+                                            <p class="card-text">
+                                                Hướng dẫn làm 1 website ứng dụng thực tế, học hỏi về thiết kế Database, tiếp cận những framework mạnh mẽ. Sau khóa học, học
+                                                viên có thể tự tin đủ khả năng xin vào các doanh nghiệp trên thị trường.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <h4 class="title">Các video bài giảng miễn phí</h4>
+                <a href="#" class="viewAllVid">Xem tất cả</a>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="card" style="width: 100%;">
+                                <a href="#">
+                                    <img class="card-img-top" src="https://pbs.twimg.com/profile_images/590149318071353345/4EqHKAGD_400x400.png" alt="Card image cap">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">JS nâng cao</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                        content.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 100%;">
+                                <a href="#">
+                                    <img class="card-img-top" src="https://usercontent2.hubstatic.com/14021517.png" alt="Card image cap">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">HTML CSS JS cơ bản</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                        content.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 100%;">
+                                <a href="#">
+                                    <img class="card-img-top" src="http://www.clickode.com/wp-content/uploads/2016/01/mongoDB-PostgreSQL-small-290x300.jpg" alt="Card image cap">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">MongoDB and PostgreSQL cơ bản </h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                        content.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="card" style="width: 100%;">
+                                <a href="#">
+                                    <img class="card-img-top" src="https://img2.storyblok.com/1600x0/filters:quality(95)/f/42126/1200x900/0c8ad6449f/nodejs-logo.png"
+                                        alt="Card image cap">
+                                </a>
+                                <div class="card-body">
+                                    <h5 class="card-title">Nodejs cơ bản</h5>
+                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                                        content.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- modal -->
+    <div class="container">
+            <!-- The Modal -->
+            <div class="modal fade" id="registerForm">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                        
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h4 class="modal-title">Đăng Ký Học</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                            <div class="introCourse">
+                                Lập Trình Web Miễn Phí
+                            </div>
+                            <form name="courseRegister" id="customerForm">
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1"><abbr title="Bắt buộc" style="color: red">*</abbr> Họ Tên: </label>
+                                    <input ng-model="name" type="text" class="form-control" aria-describedby="fullName" name="name" placeholder="Họ Tên" required>
+                                    <small ng-if="!courseRegister.name.$valid" class="form-text text-muted" style="color: red !important">Bạn vẫn chưa điền họ tên</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1"><abbr title="Bắt buộc" style="color: red">*</abbr> Phone: </label>
+                                    <input ng-model="phone" type="text" class="form-control" name="phone" aria-describedby="phoneNumber" placeholder="Số Điện Thoại" required>
+                                    <small id="emailHelp" class="form-text text-muted">Hỗ trợ viên có thể liên lạc thông báo lịch học cho bạn qua số phone này.</small>
+                                    <small ng-if="!courseRegister.phone.$valid" class="form-text text-muted" style="color: red !important">Bạn vẫn chưa điền số điện thoại</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Email: </label>
+                                    <input ng-model="email" type="email" class="form-control" name="email" aria-describedby="emailHelp" placeholder="Nhập Email">
+                                    <small ng-if="!courseRegister.email.$valid" id="emailHelp" class="form-text text-muted" style="color: red !important">Email chưa chính xác.</small>
+                                </div>
+                                <input type="text" name="" style="display: none;" ng-model="idCourse" ng-init="idCourse = 3">
+                            </form>
+                        </div>
+                        
+                        <!-- Modal footer -->
+                        <div class="modal-footer" style="text-align: center; display: table">
+                            <button ng-disabled="processingRegister" type="submit" ng-click="customerRegister()" class="btn btn-secondary" >Đăng Ký</button>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <!-- end modal -->
+    <script type="text/javascript">
+        $(".nav-item .nav-link").each(function (key, value) {
+            if (key != 0) {
+                value.href = "../" + value.href.substring(value.href.indexOf('#'));
+            }
+        });
+
+    </script>

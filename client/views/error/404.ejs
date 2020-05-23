@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>404 - Page Not Found</title>
+</head>
+<style type="text/css">
+	*{
+		margin: 0px;
+		padding: 0px;
+	}
+
+	html, 
+	.error404 {
+	    height: 100%;
+	}
+
+	.error404{
+		background: url('./images/404/404.jpg');
+		background-repeat: no-repeat;
+		background-size: 100% 100% ;
+		height: 100vh;
+	}
+	
+	.header{
+        		background: #f1f1f1!important;
+        	}
+</style>
+<body>
+	<%- contentFor('bodyContent') %>
+	<div class="error404" style="padding: 1000px 0px 0px 0px;">
+	</div>
+</body>
+</html>

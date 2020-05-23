@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Ninja Dev</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="./stylesheets/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+            crossorigin="anonymous">
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+                crossorigin="anonymous">
+                <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
+                <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+                <%- style %>
+                <style type="text/css">
+                .success-modal .modal-header{
+                background: #00C851;
+                color: white;
+                font-weight: 600;
+                }
+                .success-modal .modal-body{
+                color: #B47979;
+                }
+                </style>
+            </head>
+            <body>
+                <!-- <a href="/web-co-ban" class="popup">
+                    <div class="imgPopup"></div>
+                </a> -->
+                <%- include('header.ejs') %>
+                <div class="content" ng-app="ninjaDev" ng-controller="home">
+                    <%-bodyContent%>
+                    
+                </div>
+                <!-- End Content -->
+                <!-- Footer -->
+                <%- include('footer.ejs') %>
+                <!-- Central Modal Medium Success -->
+                <div class="modal fade" id="registerSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-notify modal-success" role="document">
+                        <!--Content-->
+                        <div class="modal-content success-modal">
+                            <!--Header-->
+                            <div class="modal-header">
+                                <p class="heading lead">Đăng Ký Thành Công</p>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" class="white-text">&times;</span>
+                                </button>
+                            </div>
+                            <!--Body-->
+                            <div class="modal-body">
+                                <div class="text-center">
+                                    <i class="fa fa-check fa-4x mb-3 animated rotateIn"></i>
+                                    <p>Chúc Mừng Bạn Đăng Ký Thành Công ! NinjaDev sẽ liên lạc với bạn sớm nhất.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/.Content-->
+                    </div>
+                </div>
+                <!-- Central Modal Medium Success-->
+                <!--Start of Tawk.to Script-->
+                <script type="text/javascript">
+                var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+                (function(){
+                var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+                s1.async=true;
+                s1.src='https://embed.tawk.to/5b8d07aaf31d0f771d8463f3/default';
+                s1.charset='UTF-8';
+                s1.setAttribute('crossorigin','*');
+                s0.parentNode.insertBefore(s1,s0);
+                })();
+                </script>
+                <!--End of Tawk.to Script-->
+                <script
+                src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+                crossorigin="anonymous"></script>
+                
+                <script src="./js/index.js"></script>
+                
+                
+                <script>
+                var app = angular.module('ninjaDev', []);
+                app.controller('home', function($scope, $http) {
+                $scope.processingRegister = false;
+                $scope.customerRegister = function () {
+                $scope.processingRegister = true;
+                $scope.idCourse = ($scope.idCourse == 1 || $scope.idCourse == 2|| $scope.idCourse == 3) ? $scope.idCourse : 0;
+                if (!$scope.courseRegister.$valid) {
+                $scope.processingRegister = false;
+                return;
+                }
+                var form = document.getElementById('customerForm');
+                form.classList.add("loading-mask");
+                $http({
+                method : "POST",
+                url : "/api/v1/customer",
+                data: {
+                name: $scope.name || '',
+                phone: $scope.phone || '',
+                email: $scope.email || '',
+                idCourse: $scope.idCourse
+                }
+                }).then(function mySuccess(response) {
+                $scope.processingRegister = false;
+                form.classList.remove("loading-mask");
+                $('#registerSuccess').modal('show');
+                }, function myError(response) {
+                $scope.result = 'Cannot submit';
+                });
+                }
+                
+                });
+                </script>
+
+                <script type="text/javascript">
+                    console.log('%c Welcome bạn đến với Ninja Dev. Mọi góp ý về website mong bạn có thể liên hệ qua:', 'background: #222; color: #bada55');
+                    console.log('%c Hotline: 08 666 33 805', 'background: #222; color: #bada55;');
+                    console.log('%c Mail: ninjadevvn@gmail.com', 'background: #222; color: #bada55');
+                </script>
+                <%-script%>
+            </body>
+            
+        </html>
